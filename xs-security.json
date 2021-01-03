@@ -1,0 +1,17 @@
+{
+  "xsappname": "myDemoXSApp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.readDataJP",
+      "description": "display"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "readRoleTemplateJP",
+      "description": "View, edit, delete",
+      "scope-references": ["$XSAPPNAME.readDataJP"]
+    }
+  ]
+}
