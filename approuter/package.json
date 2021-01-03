@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/@sap/approuter/approuter.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sap/approuter": "^9.0.1",
-    "@sap/xssec": "^3.0.10"
+    "@sap/approuter": "^9.0.1"
   }
 }

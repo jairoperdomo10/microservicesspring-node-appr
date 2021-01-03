@@ -11,4 +11,23 @@ applications:
     - hdidemodb1
     - xsuaa
   
- 
+#Node js approuter
+
+- name: approuter
+  buildpack: nodejs_buildpack
+  memory: 128M
+  routes:
+    - route: https://approuter-jfjp.cfapps.us10.hana.ondemand.com
+  timeout: 100
+  path: approuter
+  services:
+    - xsuaa
+  env:
+      destinations: >
+        [
+          {
+            "name": "spring_app",
+            "url": "https://demohdi-jfjp.cfapps.us10.hana.ondemand.com",
+            "forwardAuthToken": true
+          }
+        ]
